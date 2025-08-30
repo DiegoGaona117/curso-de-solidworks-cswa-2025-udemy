@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso SolidWorks - Vista Previa</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '373277814132384');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=373277814132384&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN68VLQLTW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RN68VLQLTW');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .product-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            max-width: 450px;
+            width: 100%;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-container:hover {
+            transform: translateY(-10px);
+        }
+        
+        .video-section {
+            position: relative;
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            padding: 0;
+            text-align: center;
+            color: white;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: white;
+        }
+        
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 25px solid #667eea;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 8px;
+        }
+        
+        .preview-text {
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .certificate-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #f39c12;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .course-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            font-weight: normal;
+            color: #7f8c8d;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .currency {
+            font-size: 24px;
+            color: #7f8c8d;
+        }
+        
+        .buttons {
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-coupon {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+        
+        .btn-coupon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(231, 76, 60, 0.4);
+        }
+        
+        .coupon-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #e74c3c;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .coupon-text {
+            color: #2c3e50;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .discount {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .guarantee {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        
+        .guarantee-icon {
+            color: #27ae60;
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .sw-logo {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 480px) {
+            .product-container {
+                margin: 10px;
+            }
+            
+            .price {
+                font-size: 36px;
+            }
+            
+            .btn {
+                padding: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="video-section">
+            <img src="https://static.wixstatic.com/media/32c95b_f9b21a33914e4d69ac74aab1cc5e3613~mv2.webp" alt="Curso SolidWorks" class="course-image">
+        </div>
+        
+        <div class="content-section">
+            <div class="course-title">
+                Curso de SolidWorks:<br>
+                <span class="subtitle">Desde Cero a Certificación Internacional</span>
+            </div>
+            
+            <div class="price">
+                549 <span class="currency">MX$</span>
+            </div>
+            
+            <div class="coupon-section">
+                <div class="coupon-text">
+                    🎯 <strong>¡Oferta especial!</strong><br>
+                    Usa tu cupón y obtén <span class="discount">31% de descuento</span>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn btn-coupon" onclick="applyCoupon()">
+                    🎫 Aplicar cupón
+                </button>
+            </div>
+            
+            <div class="guarantee">
+                <span class="guarantee-icon">✅</span>
+                Garantía de reembolso de 30 días
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playVideo() {
+            alert('🎬 Reproduciendo vista previa del curso...\n\n¡Aquí se abriría el video de demostración!');
+            
+            // Animación del botón de play
+            const playBtn = document.querySelector('.play-button');
+            playBtn.style.transform = 'translate(-50%, -50%) scale(0.9)';
+            setTimeout(() => {
+                playBtn.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 150);
+        }
+        
+        function applyCoupon() {
+            const btn = document.querySelector('.btn-coupon');
+            const priceElement = document.querySelector('.price');
+            
+            console.log('Aplicando cupón...');
+            
+            // Cambiar botón permanentemente
+            btn.innerHTML = '✅ ¡Cupón aplicado!';
+            btn.style.background = 'linear-gradient(45deg, #27ae60, #2ecc71)';
+            btn.disabled = true;
+            btn.style.cursor = 'not-allowed';
+            
+            // Mostrar precio con descuento permanentemente
+            priceElement.innerHTML = '<span style="text-decoration: line-through; color: #7f8c8d; font-size: 24px;">549</span> <span style="color: #e74c3c;">379</span> <span class="currency">MX$</span>';
+            
+            // Evento de Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'AddToCart', {
+                    content_name: 'Curso SolidWorks: Desde Cero a Certificación Internacional',
+                    content_category: 'Online Course',
+                    content_ids: ['solidworks-course'],
+                    value: 379,
+                    currency: 'MXN'
+                });
+                console.log('Facebook pixel event fired');
+            }
+            
+            // Evento de Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'add_to_cart', {
+                    currency: 'MXN',
+                    value: 379,
+                    items: [{
+                        item_id: 'solidworks-course',
+                        item_name: 'Curso SolidWorks: Desde Cero a Certificación Internacional',
+                        category: 'Online Course',
+                        quantity: 1,
+                        price: 379
+                    }]
+                });
+                console.log('Google Analytics event fired');
+            }
+            
+            // Abrir Udemy - intentar múltiples métodos
+            const udemyUrl = 'https://www.udemy.com/course/curso-de-solidworks-2020-preparate-para-cswa-diego-gaona/?couponCode=19BA02841286B6A4A3A5';
+            
+            console.log('Intentando abrir:', udemyUrl);
+            
+            // Método 1: window.open
+            const newWindow = window.open(udemyUrl, '_blank');
+            
+            // Método 2: Si el método 1 fue bloqueado
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                console.log('Pop-up bloqueado, usando location.href');
+                window.location.href = udemyUrl;
+            }
+        }
+        
+        // Efectos adicionales
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de entrada
+            const container = document.querySelector('.product-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(50px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.8s ease';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
